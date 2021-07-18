@@ -1,0 +1,23 @@
+{
+  "main": {
+    "field_error": "This field is mandatory",
+    "capture_images": "Capture Images",
+    "password": "Password",
+    "user_name": "User Name",
+    "logout_screen": "Are you sure you want to logout from this app?",
+    "leave_screen": "Are you sure you want to leave this screen ?",
+    "apex_assessment": "Apex Assessment",
+    "winning_percentage": "Winning Percentage",
+    "tournament_won": "Tournaments Won",
+    "tournament_played": "Tournaments Played",
+    "recommended_for_you": "Recommended for you",
+    "display_name": "Simon Barker",
+    "elo_rating": "Elo Rating",
+    "flying_wolf": "Flying wolf",
+    "user_name_error": "Please enter valid user name and proceed!",
+    "password_error": "Please enter valid password and proceed!",
+    "login": "Login",
+    "user_not_exist": "User not exist, register first and proceed!",
+    "password_incorrect": "Please enter valid password!"
+  }
+}
