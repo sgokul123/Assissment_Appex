@@ -2,31 +2,33 @@ import 'package:appex_assignment/src/utils/custom_color.dart';
 import 'package:flutter/material.dart';
 
 class AppInputDecoration {
-  InputDecoration getDecoration({String prefix,
-    Widget prefixIcon,
-    Widget suffixIcon,
-    @required String hint,
-    Widget suffix,
-    String counterText,
-    FloatingLabelBehavior floatingLabelBehavior,
-    double borderRadius,
-    EdgeInsetsGeometry contentPadding}) {
+  InputDecoration getDecoration(
+      {String prefix,
+      Widget prefixIcon,
+      Widget suffixIcon,
+      @required String hint,
+      Widget suffix,
+      String counterText,
+      FloatingLabelBehavior floatingLabelBehavior,
+      double borderRadius,
+      EdgeInsetsGeometry contentPadding}) {
     return InputDecoration(
-       floatingLabelBehavior: floatingLabelBehavior??FloatingLabelBehavior.auto,
+        floatingLabelBehavior:
+            floatingLabelBehavior ?? FloatingLabelBehavior.auto,
         fillColor: CustomColor.colorWhite,
         filled: true,
         errorMaxLines: 2,
         prefixText: prefix,
         prefixIcon: prefixIcon != null
             ? new Container(
-          child: prefixIcon,
-        )
+                child: prefixIcon,
+              )
             : null,
         counterText: "",
         suffixIcon: suffixIcon != null
             ? new Container(
-          child: suffixIcon,
-        )
+                child: suffixIcon,
+              )
             : null,
         suffix: suffix,
         labelText: hint,
@@ -35,7 +37,7 @@ class AppInputDecoration {
           fontSize: 14.0,
         ),
         contentPadding:
-        contentPadding == null ? EdgeInsets.all(16) : contentPadding,
+            contentPadding == null ? EdgeInsets.all(16) : contentPadding,
         errorStyle: TextStyle(
           color: CustomColor.fieldErrorTextColor,
           fontSize: 14.0,
@@ -49,9 +51,7 @@ class AppInputDecoration {
   InputBorder getOutlineBorder(double borderRadius) {
     return OutlineInputBorder(
         borderRadius: BorderRadius.circular(borderRadius),
-        borderSide: BorderSide(
-            width:  5.0,
-            color: CustomColor.colorWhite));
+        borderSide: BorderSide(width: 5.0, color: CustomColor.colorWhite));
   }
 
   EdgeInsetsGeometry getCommonPaddingForField() {

@@ -1,4 +1,3 @@
-import 'package:appex_assignment/src/api/api_repository.dart';
 import 'package:appex_assignment/src/localisation/generated/locale_base.dart';
 import 'package:appex_assignment/src/utils/constants.dart';
 import 'package:appex_assignment/src/utils/flutter_toast.dart';

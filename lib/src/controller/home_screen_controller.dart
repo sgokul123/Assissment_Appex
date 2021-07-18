@@ -9,67 +9,26 @@ import 'package:get/get.dart';
 class HomeScreenController extends GetxController {
   final EncryptedSharedPreferences encryptedSharedPreferences =
       EncryptedSharedPreferences();
-  TextEditingController searchController = TextEditingController();
-  final _pendingCount = 0.obs;
   BuildContext context;
 
   HomeScreenController({this.context});
-
-  get pendingCount => this._pendingCount.value;
-
-  set pendingCount(value) => this._pendingCount.value = value;
-
-  final _showPendingPlaceHolder = false.obs;
-
-  get showPendingPlaceHolder => this._showPendingPlaceHolder.value;
-
-  set showPendingPlaceHolder(value) =>
-      this._showPendingPlaceHolder.value = value;
-
-  final _completedCount = 0.obs;
-  final _isCompletedCalled = false.obs;
-
-  final _showCompletedPlaceHolder = false.obs;
-
-  get showCompletedPlaceHolder => this._showCompletedPlaceHolder.value;
-
-  set showCompletedPlaceHolder(value) =>
-      this._showCompletedPlaceHolder.value = value;
-
-  get completedCount => this._completedCount.value;
-
-  set completedCount(value) => this._completedCount.value = value;
-
-  get isCompletedCalled => this._isCompletedCalled.value;
-
-  set isCompletedCalled(value) => this._isCompletedCalled.value = value;
-
-  final _selectedIndex = 0.obs;
-  final _showPlaceHolder = false.obs;
-
-  get selectedIndex => this._selectedIndex.value;
-
-  set selectedIndex(value) => this._selectedIndex.value = value;
-
-  get showPlaceHolder => this._showPlaceHolder.value;
-
-  set showPlaceHolder(value) => this._showPlaceHolder.value = value;
-  GlobalKey<State> keyChild1 = GlobalKey();
 
   final _myResultList = List<DataModel>.empty(growable: true).obs;
 
   get myResultList => this._myResultList.value;
 
   set myResultList(value) => this._myResultList.assignAll(value);
+  final _showPlaceHolder = false.obs;
+
+  get showPlaceHolder => this._showPlaceHolder.value;
+
+  set showPlaceHolder(value) => this._showPlaceHolder.value = value;
 
   @override
   void onInit() {
     Get.lazyPut(() => APIRepository());
-    getData();
     super.onInit();
   }
-
-  Future<void> getData() async {}
 
   @override
   void onClose() {

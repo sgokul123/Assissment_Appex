@@ -1,5 +1,3 @@
-import 'montly_expense_model.dart';
-
 class DataModel {
   String admin_locale;
   String tournament_url;
